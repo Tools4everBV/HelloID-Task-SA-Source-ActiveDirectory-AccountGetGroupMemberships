@@ -21,7 +21,11 @@ try {
         if($resultCount -gt 0) {
             foreach($group in $groups)
             {
-                $returnObject = @{name="$($group.name)"; sid = [string]"$($group.sid)"}
+                $returnObject = @{
+                    name    = "$($group.name)";
+                    sid     = [string]"$($group.sid)";
+                }
+                
                 Write-Output $returnObject
             }
         }
